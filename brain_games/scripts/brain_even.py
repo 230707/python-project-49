@@ -23,10 +23,12 @@ def main():
         elif user_answer.lower() == 'yes' and random_number % 2 != 0:
             print(f"'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {user_name}!")
             break
+
         elif user_answer.lower() == 'no' and random_number % 2 == 0:
             print(f"'no' is wrong answer ;(. Correct answer was 'yes'. \nLet's try again, {user_name}!")
             break
         elif user_answer.lower() != 'yes' or 'no':
+            print(f"it's wrong answer ;(. \nLet's try again, {user_name}!")
             break
 
     if i == 3:
