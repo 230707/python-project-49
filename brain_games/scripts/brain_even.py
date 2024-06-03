@@ -1,17 +1,13 @@
 #!/usr/bin/env python3
 
-from brain_games.cli import welcome_user, get_user_name
 import prompt
 from random import randint
 
 
-name = get_user_name()
-
-
 def main():
     print('Welcome to the Brain Games!')
-    welcome_user()
-    print("Answer 'yes' if the number is even, otherwise answer 'no'.")
+    user_name = prompt.string("May I have your name? ")
+    print(f"Hello, {user_name}!\nAnswer 'yes' if the number is even, otherwise answer 'no'.")
 
     i = 0
     while i < 3:
@@ -25,13 +21,16 @@ def main():
             print('Correct!')
             i += 1
         elif user_answer.lower() == 'yes' and random_number % 2 != 0:
-            print(f"'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {name}!")
+            print(f"'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {user_name}!")
             break
         elif user_answer.lower() == 'no' and random_number % 2 == 0:
-            print(f"'no' is wrong answer ;(. Correct answer was 'yes'. \nLet's try again, {name}!")
+            print(f"'no' is wrong answer ;(. Correct answer was 'yes'. \nLet's try again, {user_name}!")
             break
+        elif user_answer.lower() != 'yes' or 'no':
+            break
+
     if i == 3:
-        print(f"Congratulations, {name}!")
+        print(f"Congratulations, {user_name}!")
 
 
 if __name__ == '__main__':
