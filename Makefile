@@ -13,6 +13,10 @@ brain-games:
 brain-even:
 	poetry run brain_even
 
+# запуск brain_calc
+brain-calc:
+	poetry run brain_calc
+
 # сборка проекта
 build:
 	poetry build
@@ -25,5 +29,5 @@ package-install:
 	poetry run pip install dist/*.whl
 
 # запускаем линтер
-make lint:
+lint:
 	poetry run flake8 brain_games
