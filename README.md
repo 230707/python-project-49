@@ -14,3 +14,6 @@
 
 ### Аскинема - запуск игры brain-gcd с демонтсрацией различных исходов игры:
 <a href="https://asciinema.org/a/azHJkqdRzw7WoBZ98FekrGUUi" target="_blank"><img src="https://asciinema.org/a/azHJkqdRzw7WoBZ98FekrGUUi.svg" /></a>
+
+### Аскинема - запуск игры brain-progression с демонтсрацией различных исходов игры:
+<a href="https://asciinema.org/a/LJZ8xdPdl0lUEgMUoutGM7fZ6" target="_blank"><img src="https://asciinema.org/a/LJZ8xdPdl0lUEgMUoutGM7fZ6.svg" /></a>

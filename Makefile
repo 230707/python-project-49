@@ -23,6 +23,11 @@ brain-gcd:
 	poetry run brain_gcd
 
 
+# launch brain_progression
+brain-progression:
+	poetry run brain_progression
+
+
 # сборка проекта
 build:
 	poetry build
@@ -32,7 +37,7 @@ publish:
 	poetry publish --dry-run
 
 package-install:
-	poetry run pip install dist/*.whl
+	poetry run pip install ./dist/hexlet_code-0.1.0-py3-none-any.whl
 
 # запускаем линтер
 lint:
