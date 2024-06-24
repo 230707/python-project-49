@@ -10,4 +10,7 @@
 <a href="https://asciinema.org/a/KjMKKe5QAuYn6CFZmbjKYPdwT" target="_blank"><img src="https://asciinema.org/a/KjMKKe5QAuYn6CFZmbjKYPdwT.svg" /></a>
 
 ### Аскинема - запуск игры brain-calc с демонстрацией различных исходов игры:
-<a href="https://asciinema.org/a/yDn91VmUG9WLN9XdJdkNH3tDP" target="_blank"><img src="https://asciinema.org/a/yDn91VmUG9WLN9XdJdkNH3tDP.svg" /></a>
+<a href="https://asciinema.org/a/kDHc1sPjdmXitwFUPvJVLDpMW" target="_blank"><img src="https://asciinema.org/a/kDHc1sPjdmXitwFUPvJVLDpMW.svg" /></a>
+
+### Аскинема - запуск игры brain-gcd с демонтсрацией различных исходов игры:
+<a href="https://asciinema.org/a/azHJkqdRzw7WoBZ98FekrGUUi" target="_blank"><img src="https://asciinema.org/a/azHJkqdRzw7WoBZ98FekrGUUi.svg" /></a>

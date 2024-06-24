@@ -17,6 +17,12 @@ brain-even:
 brain-calc:
 	poetry run brain_calc
 
+
+# launch brain_gcd
+brain-gcd:
+	poetry run brain_gcd
+
+
 # сборка проекта
 build:
 	poetry build

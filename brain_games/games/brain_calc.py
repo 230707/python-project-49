@@ -3,25 +3,35 @@
 
 # прописываем все необходимые нам импорты:
 import random
-from random import randint
+
+
 from brain_games.scripts.welcome import greet
 from brain_games.scripts.welcome import get_user_name
 from brain_games.scripts.welcome import hello
+from brain_games.scripts.welcome import create_randome_number
 from brain_games.scripts.welcome import user_answer
 from brain_games.scripts.welcome import yuhoo
 
 
 # создаем функцию, которая будет рандомно генерить число1,
-# число 2 и математический знак (+/-/*):
+# число 2 и математический знак (+/-/*)
+# чтобы математический знак не повторялся, вводим глобальную переменную,
+# в коорую будем помещать результат предыдущего выбора:
+previous_sign = None
+
+
 def generate_random_math_operation():
-    random_num_1: int = randint(1, 10)
-    random_num_2: int = randint(1, 10)
+    global previous_sign
+    random_num_1 = create_randome_number()
+    random_num_2 = create_randome_number()
     signs = ['+', '-', '*']
     chosen_sign = random.choice(signs)
-    if chosen_sign == "*":
-        signs = ['+', '-']
-    else:
-        signs = ['+', '*']
+
+    while previous_sign == chosen_sign:
+        chosen_sign = random.choice(signs)
+
+    previous_sign = chosen_sign
+
     return random_num_1, chosen_sign, random_num_2
 
 
@@ -43,10 +53,11 @@ def correct_result(random_num_1, chosen_sign, random_num_2):
 def question(random_num_1, chosen_sign, random_num_2):
     if chosen_sign == '+' or '*':
         print(f'Question: {random_num_1} {chosen_sign} {random_num_2}')
-    elif chosen_sign == '-' and random_num_1 >= random_num_2:
-        print(f'Question: {random_num_1} {chosen_sign} {random_num_2}')
     else:
-        print(f'Question: {random_num_2} {chosen_sign} {random_num_1}')
+        if random_num_1 >= random_num_2:
+            print(f'Question: {random_num_1} {chosen_sign} {random_num_2}')
+        else:
+            print(f'Question: {random_num_2} {chosen_sign} {random_num_1}')
 
 
 def main():  # выделяем блок кода, который будет работать
@@ -64,16 +75,8 @@ def main():  # выделяем блок кода, который будет р�
         # random_num_1, chosen_sign, random_num_2 =
         # generate_random_math_operation() - была вот такая строка,
         # но что бы не ругался линтер разбиваем ее на 2:
-        random_num_1, chosen_sign = generate_random_math_operation()[:2]
-        random_num_2 = generate_random_math_operation()[2]
-        # добавляем условие, что бы все три раза подряд
-        # не выбирался один и тот же знак:
-        if chosen_sign == "*":
-            signs = ['+', '-']
-        else:
-            signs = ['+', '*']
-
-        chosen_sign = random.choice(signs)
+        (random_num_1, chosen_sign, random_num_2) = \
+            generate_random_math_operation()
 
         result = correct_result(random_num_1, chosen_sign, random_num_2)
 

@@ -1,4 +1,5 @@
 import prompt
+from random import randint
 
 
 def greet():
@@ -26,6 +27,11 @@ def hello():
 def user_answer():
     answer = prompt.string('Your answer: ')
     return answer
+
+
+def create_randome_number():
+    random_number = randint(1, 10)
+    return random_number
 
 
 def yuhoo():
