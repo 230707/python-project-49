@@ -27,17 +27,16 @@ def main():
         else:
             correct_answer = 'no'
 
-
         if answer.lower() == correct_answer:
             print('Correct!')
             i += 1
         else:
             print(
-                f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'."
+                f"'{answer}' is wrong answer ;(."
+                f" Correct answer was '{correct_answer}'."
                 f"\nLet's try again, {name}!"
             )
             break
-
 
     if i == 3:
         yuhoo()

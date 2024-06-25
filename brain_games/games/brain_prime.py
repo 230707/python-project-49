@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 
-import random
 from brain_games.scripts.welcome import greet
 from brain_games.scripts.welcome import get_user_name
 from brain_games.scripts.welcome import hello
@@ -11,6 +10,8 @@ from brain_games.scripts.welcome import yuhoo
 
 num = create_randome_number()
 previous_num = 0
+
+
 def check_prime(num):
     global previous_num
     while previous_num == num:
@@ -51,13 +52,15 @@ def main():
             i += 1
         else:
             print(
-            f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'."
-            f"\nLet's try again, {name}!"
+                f"'{answer}' is wrong answer ;(."
+                f" Correct answer was '{correct_answer}'."
+                f"\nLet's try again, {name}!"
             )
             break
 
     if i == 3:
         yuhoo()
+
 
 if __name__ == '__main__':
     main()
