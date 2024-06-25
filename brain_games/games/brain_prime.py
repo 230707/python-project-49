@@ -10,11 +10,20 @@ from brain_games.scripts.welcome import user_answer
 from brain_games.scripts.welcome import yuhoo
 
 num = create_randome_number()
+previous_num = 0
 def check_prime(num):
+    global previous_num
+    while previous_num == num:
+        num = create_randome_number()
+
+    previous_num = num
+
     count = 0
+
     for i in range(1, num + 1):
         if num % i == 0:
             count += 1
+
     return count
 
 
@@ -28,9 +37,9 @@ def main():
     i = 0
     while i < 3:
         num = create_randome_number()
+        count = check_prime(num)
         print(f'Question: {num}')
         answer = user_answer()
-        count = check_prime(num)
 
         if count == 2:
             correct_answer = 'yes'

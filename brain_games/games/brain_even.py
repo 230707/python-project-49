@@ -22,28 +22,22 @@ def main():
         random_number = randint(1, 1000)
         print(f'Question: {random_number}')
         answer = str(user_answer())
-        if (
-            (answer.lower() == 'yes' and random_number % 2 == 0)
-            or (answer.lower() == 'no' and random_number % 2 != 0)
-        ):
+        if random_number % 2 == 0:
+            correct_answer = 'yes'
+        else:
+            correct_answer = 'no'
+
+
+        if answer.lower() == correct_answer:
             print('Correct!')
             i += 1
-        elif answer.lower() == 'yes' and random_number % 2 != 0:
+        else:
             print(
-                f"'yes' is wrong answer ;(. Correct answer was 'no'."
+                f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'."
                 f"\nLet's try again, {name}!"
             )
             break
 
-        elif answer.lower() == 'no' and random_number % 2 == 0:
-            print(
-                f"'no' is wrong answer ;(. Correct answer was 'yes'. "
-                f"\nLet's try again, {name}!"
-            )
-            break
-        elif answer.lower() != 'yes' or 'no':
-            print(f"it's wrong answer ;(. \nLet's try again, {name}!")
-            break
 
     if i == 3:
         yuhoo()
