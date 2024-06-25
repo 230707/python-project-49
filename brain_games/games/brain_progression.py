@@ -52,7 +52,7 @@ def main():
         count: int = 10
         progression = create_progression(start_num, step_num, count)
         progression_1, correct_result = hide_sign(progression)
-        print(f"Question: {progression_1}")
+        print(f"Question: {' '.join(map(str, progression_1))}")
         answer = int(user_answer())
 
         if answer == correct_result:
