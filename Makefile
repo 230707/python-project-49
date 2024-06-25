@@ -28,6 +28,11 @@ brain-progression:
 	poetry run brain_progression
 
 
+# launch brain-prime
+brain-prime:
+	poetry run braim_prime
+
+
 # сборка проекта
 build:
 	poetry build
