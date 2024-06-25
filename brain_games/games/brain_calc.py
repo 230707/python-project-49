@@ -43,21 +43,12 @@ def correct_result(random_num_1, chosen_sign, random_num_2):
     elif chosen_sign == "*":
         result: int = random_num_1 * random_num_2
     elif chosen_sign == "-":
-        if random_num_1 >= random_num_2:
-            result: int = random_num_1 - random_num_2
-        else:
-            result: int = random_num_2 - random_num_1
+        result: int = random_num_1 - random_num_2
     return result
 
 
 def question(random_num_1, chosen_sign, random_num_2):
-    if chosen_sign == '+' or '*':
-        print(f'Question: {random_num_1} {chosen_sign} {random_num_2}')
-    else:
-        if random_num_1 >= random_num_2:
-            print(f'Question: {random_num_1} {chosen_sign} {random_num_2}')
-        else:
-            print(f'Question: {random_num_2} {chosen_sign} {random_num_1}')
+    print(f"Question: {random_num_1} {chosen_sign} {random_num_2}")
 
 
 def main():  # выделяем блок кода, который будет работать
