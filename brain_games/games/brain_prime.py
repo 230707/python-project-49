@@ -42,7 +42,7 @@ def main():
         print(f'Question: {num}')
         answer = user_answer()
 
-        if count == 2 or num == 1:
+        if count == 2:
             correct_answer = 'yes'
         else:
             correct_answer = 'no'
