@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "Учебный проект по итогам 1го модуля. Хэкслет."
 authors = ["Svetlana Lebedinskaya <lsv.0780@gmail.com>"]
 readme = "README.md"
 packages = [
